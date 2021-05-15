@@ -333,5 +333,127 @@
 				}
 			]
 		}
+	],
+	"class": [
+		{
+			"name": "Gunslinger",
+			"source": "ArcaneArtillery",
+			"hd": {
+				"number": 1,
+				"faces": 8
+			},
+			"proficiency": ["dex", "cha"],
+			"startingProficiencies": {
+				"armor": ["light", "medium", "{@item shield|phb|shields}"],
+				"weapons": [
+					"longarms",
+					"sidearms",
+					"simple weapons",
+					"crossbows",
+					"shortswords",
+					"scimitars",
+					"rapiers",
+					"whips"
+				],
+				"tools": ["A vehicle or musical instrument of your choice"],
+				"skills": [
+					{
+						"choose": {
+							"from": [
+								"arcana",
+								"acrobatics",
+								"animal handling",
+								"history",
+								"insight",
+								"intimidation",
+								"investigation",
+								"perception",
+								"performance",
+								"persuasion",
+								"sleight of hand",
+								"survival"
+							],
+							"count": 2
+						}
+					}
+				]
+			},
+			"startingEquipment": {
+				"additionalFromBackground": true,
+				"default": [""],
+				"goldAlternative": "{@dice 5d4*10|5d4 x 10|Starting Gold}"
+			},
+			"multiclassing": {
+				"requirements": {
+					"dex": 13,
+					"cha": 13
+				},
+				"proficienciesGained": {
+					"weapons": ["longarms", "sidearms"],
+					"tools": ["A vehicle of your choice"]
+				}
+			},
+			"classFeatures": [
+				"The Tongue|Gunslinger|ArcaneArtillery|1|ArcaneArtillery"
+			],
+			"fluff": [
+				{
+					"name": "The Gunslinger",
+					"type": "section",
+					"entries": [
+						"A Human finishes loading rounds into her gun and and runs straight into a pack of angry kobolds that are threatening her town. She tumbles and spins, her weapon burping out salvo after salvo of hot lead against the poorly armed draconians with naught but simple spears to use against her.",
+						"Setting his perch up at the top of a tree, a Half Elf begins to train the custom built sights of his homemade rifle on his prize. Amidst the roaming herd of goblins and hobgoblins, there stands a single, massive fire giant shouting commands to the monsters near the edge of a cliff. As he lets out a haughty guffaw, the half-elf sees his opening. His lips curl into a grin, and he pulls the trigger.",
+						"The sound of rapid clops echoes across the battlefield. A group of goblins tries to close in on a tiefling and her horse.  One of them throws a bomb at her horses feet, but in a flash, the horse and its rider suddenly dart to the side, and the bomb explodes among the crowd of pursuers instead, leaving the tiefling unharm",
+						"A half orc examines a strange puzzle before him, holstering his gun after checking that the coast is clear. He looks befudded at it for a moment, before shrugging and messing around with it. With a click, the puzzle opens, and the half-orc smiles a giddy smile.",
+						"Whether outlaws from a distant land trying to redeem themselves, swashbucklers with an eye for the explosive, or smiths that wish to show off their talents to the world in the heat of battle, gunslingers come from many backgrounds, but all have one thing in common. They’re all very good with guns, and use unique fighting styles and speed to strike down any foe that challenges them with less advanced weaponry.",
+						{
+							"type": "entries",
+							"name": "Using Unique Weapons With Style",
+							"header": 1,
+							"entries": [
+								"Though this is heavily dependent on the adventure being run, guns are considered very rare in most adventures, and few know how to operate them. Their exotic nature can lead to confusion and panic among those at the business end of these tools. Gunslingers take advantage of this and combine the usage of these guns with a stylistic grace and speed very few can comprehend. A Gunslinger will hone their skills with these distributors of supersonic lead death and become nearly impossible to track as they strike targets with nearly impossible shots"
+							]
+						},
+						{
+							"type": "entries",
+							"name": "Born for Adventure",
+							"header": 1,
+							"entries": [
+								"Most adventurers seek adventure out. Others have it thrust upon them. Gunslingers seem to have been born with a natural affinity and curiosity for exploration and dealing with the problems out in the wild. You'll find them at the job board before any paladin or fighter, and they'll be eager to take on the challenges of the darkest and most dangerous dungeons.  The more challenging the encounter, the greater use they'll get out of their pride and joy."
+							]
+						},
+						{
+							"type": "entries",
+							"name": "Creating a Gunslinger",
+							"header": 1,
+							"entries": [
+								"When creating a gunslinger, consider two major things.  Firstly, consider how rare guns are in the adventure your DM is running, and then consider how your character came across their knowledge of how to make and use them? Did they have a eureka moment in a time of renaissance? Did they train with a mentor before deciding to go on their own path?  Or did they form a pact with a dark entity for this knowledge?  Either way, their background should lead them to come across these deadly tools for use in their adventures."
+							]
+						},
+						{
+							"type": "entries",
+							"name": "Quick Build",
+							"header": 1,
+							"entries": [
+								"To quickly build a gunslinger, make Dexterity your highest ability score. Secondly, choose an ability score of your choice to be the second highest. This could be Constitution if you want a hardier gunslinger with more health, Charisma if you want a fast talking slinger that can play a mean tune, Intelligence if you want a gunslinger that's well learned and booksmart, or Wisdom if you want a worldy and perceptive master of firearms. Lastly, choose the Folk Hero background."
+							]
+						}
+					]
+				}
+			]
+		}
+	],
+	"classFeature": [
+		{
+			"name": "The Tongue",
+			"source": "ArcaneArtillery",
+			"className": "Gunslinger",
+			"classSource": "ArcaneArtillery",
+			"level": 1,
+			"entries": [
+				"Starting at 1st level, you learn an ancient and ritualized language, practiced often by gunslingers and certain secretive societies of old. It is a deliberate and ritualized code of speech patterns and dialect, each syllable containing complex nuances and multiple meanings. Nowadays, only gunslingers and certain guilds opened by the people of the past still know and actively teach this language. This language can only be understood by those that know the tongue.",
+				"Additionally, you understand and can write in a set of ancient symbols and written jargon that conveys the messages of the tongue in deceptively short inscriptions. This writing is generally used to tell stories or to write down spells and rituals, and books containing the tongue are treasures often sought out by linguists and wizards alike due to the potential of finding lost magic or rich historical lore contained within in their text."
+			]
+		}
 	]
 }
