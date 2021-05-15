@@ -1,0 +1,337 @@
+{
+	"_meta": {
+		"sources": [
+			{
+				"json": "ArcaneArtillery",
+				"abbreviation": "AA",
+				"full": "Arcane Artillery: The Gun Nut's Guide for 5th Edition",
+				"authors": ["Zow aka /u/ZoeJr"],
+				"version": "1.0.0",
+				"url": "https://www.reddit.com/r/UnearthedArcana/comments/6om1nu/arcane_artillery_the_gun_nuts_guide_final_edition/",
+				"convertedBy": ["mrtheduts"],
+				"targetSchema": "2.0.0"
+			}
+		],
+		"dateAdded": 0,
+		"dateLastModified": 0
+	},
+	"feat": [
+		{
+			"name": "Akimbo Master",
+			"source": "ArcaneArtillery",
+			"page": 9,
+			"entries": [
+				"You master the art of wielding two ranged weapons at once. You gain the following benefits:",
+				{
+					"type": "list",
+					"items": [
+						"You can draw or holster two sidearms when you would normally be able to draw or holster only one.",
+						"If you are wielding two ranged weapons with the loading property, you can ignore the loading property for those weapons, and do not need a free hand to reload them.",
+						"You can wield two one-handed ranged weapons at once, even if they do not have the light property."
+					]
+				}
+			]
+		},
+		{
+			"name": "Archaic Gunmaster",
+			"source": "ArcaneArtillery",
+			"page": 9,
+			"prerequisite": [
+				{
+					"other": "Primitive & Misfire Rules implemented"
+				}
+			],
+			"entries": [
+				"You have become well trained with primitive firearms. You gain the following benefits:",
+				{
+					"type": "list",
+					"items": [
+						"When you make more than two attacks with a primitive firearm during your turn, the firearm's misfire count does not increase by 1.",
+						"These weapons only misfire for you if you roll a 1, regardless of its misfire number.",
+						"Ignore the loading property for non-heavy firearms"
+					]
+				}
+			]
+		},
+		{
+			"name": "Gunmaster",
+			"source": "ArcaneArtillery",
+			"page": 9,
+			"entries": [
+				"You are a veritable master with guns, and gain the following benefits:",
+				{
+					"type": "list",
+					"items": [
+						"Ignore the loading property for non-heavy firearms.",
+						"If you are disarmed, you can use your reaction to draw and fire a light sidearm.",
+						"Increase the normal range of all firearms you wield by 10."
+					]
+				}
+			]
+		},
+		{
+			"name": "Bayoneteer",
+			"source": "ArcaneArtillery",
+			"page": 9,
+			"prerequisite": [
+				{
+					"proficiency": [
+						{
+							"weapon": "firearm"
+						}
+					]
+				}
+			],
+			"entries": [
+				"You have mastered the art of fighting with weapons attached to the barrel of your gun. You gain the following benefits:",
+				{
+					"type": "list",
+					"items": [
+						"You gain a +1 bonus to damage rolls with bayonets.",
+						"You gain proficiency in improvised weapons.",
+						"Firearms with bayonets attached gain a reach of 10 feet.",
+						"When you take the attack action with a firearm that has a bayonet attached to it, you can use a bonus action to make a melee attack with the bayonet at a creature within 5 feet of you."
+					]
+				}
+			]
+		},
+		{
+			"name": "Buccaneer",
+			"source": "ArcaneArtillery",
+			"page": 9,
+			"entries": [
+				"You have mastered the art of dueling with gun and sword, and gain the following benefits:",
+				{
+					"type": "list",
+					"items": [
+						"When you use the attack action with a one-handed melee weapon, you can spend a bonus action to fire a light firearm you wield in your other hand. You can use this bonus action to attack with a one handed melee weapon if you use your attack action with a light firearm.",
+						"While wielding a light firearm and a one-handed melee weapon, you gain a +1 bonus to your AC.",
+						"Ignore the loading time and reload action for light firearms. You do not need a free hand to load in the ammunition."
+					]
+				}
+			]
+		},
+		{
+			"name": "Close Quarters Shooter",
+			"source": "ArcaneArtillery",
+			"page": 9,
+			"entries": [
+				"You have trained yourself in the delicate art of using ranged weapons in close quarters combat. You gain the following benefits:",
+				{
+					"type": "list",
+					"items": [
+						"Making an attack with a ranged weapon while within 5 feet of a hostile creature does not impose disadvantage on the attack roll.",
+						"You cannot make a ranged attack roll with disadvantage at any target within 30 feet of you. However, if you would normally have disadvantage when making an attack roll within this range, such as a magical effect or obscured vision, you cannot get advantage on the attack roll either.",
+						"You can make opportunity attacks with ranged weapons. The reach for these attacks is 15 feet."
+					]
+				}
+			]
+		},
+		{
+			"name": "Gunsmith Initiate",
+			"source": "ArcaneArtillery",
+			"page": 9,
+			"prerequisite": [
+				{
+					"ability": [
+						{
+							"int": 13
+						}
+					],
+					"otherSummary": [
+						{
+							"entry": "proficiency in smith's tools or tinker's tools",
+							"entrySummary": "smith's tools or tinker's tools"
+						}
+					]
+				}
+			],
+			"entries": [
+				"Your proficiency bonus is doubled in tinker's tools and/or smith's tools, and you can now craft primitive firearms. You are assumed to have gotten the materials for the firearm you wish to craft before you took this feat. You craft these guns at a rate of 5gp per hour."
+			]
+		},
+		{
+			"name": "Gunsmith Adept",
+			"source": "ArcaneArtillery",
+			"page": 9,
+			"prerequisite": [
+				{
+					"level": 12,
+					"other": "{@feat Gunsmith Initiate|ArcaneArtillery}"
+				}
+			],
+			"entries": [
+				"You have gone through extensive training in gunsmithing, letting you create new firearms via experimenting. You can now create firearms, found on the chart above. You can craft special firearms, as well as Attachments and Custom Parts, if it is appropriate for your setting (such as if firearms are prominent). Once per long rest, you can make an Intelligence check with your proficiency bonus added once you complete a short rest. If you succeed, you manage to craft the blueprints for the gun or parts (the DCs are listed on the charts above). If you fail, the DC goes down by 1 for subsequent checks (Minimum of 10).",
+				"You have gone through extensive training in gunsmithing, letting you create new firearms via experimenting. You can now create firearms, found on the chart above. You can craft special firearms, as well as Attachments and Custom Parts, if it is appropriate for your setting (such as if firearms are prominent). Once per long rest, you can make an Intelligence check with your proficiency bonus added once you complete a short rest. If you succeed, you manage to craft the blueprints for the gun or parts (the DCs are listed on the charts above). If you fail, the DC goes down by 1 for subsequent checks (Minimum of 10).",
+				"The cost to craft primitive firearms is now cut in half for you (rounded up).",
+				"You can now reduce a primitive firearm's misfire number to a minimum of 1, regardless of its original misfire number."
+			]
+		},
+		{
+			"name": "Heavy Weapons Guy",
+			"source": "ArcaneArtillery",
+			"page": 10,
+			"prerequisite": [
+				{
+					"ability": [
+						{
+							"str": 16
+						}
+					]
+				}
+			],
+			"entries": [
+				"You have strengthened yourself to be able to use large and unwieldy firearms more effectively. If you have the {@classFeature Extra Attack|Gunslinger|ArcaneArtillery|5|ArcaneArtillery} feature, you can use a single one of those attacks when you use those features with a bulky firearm. Ignore the loading property once per turn for these weapons."
+			]
+		},
+		{
+			"name": "Mounted Shooting",
+			"source": "ArcaneArtillery",
+			"page": 10,
+			"entries": [
+				"You wield guns with deadly efficiency on mounts. While you are mounted and aren't incapacitated, you gain the following benefits:",
+				{
+					"type": "list",
+					"items": [
+						"You get a +1 bonus to attack rolls with firearms while mounted.",
+						"Being within 5 feet of a hostile creature when making an attack roll with firearms while mounted does not impose disadvantage on the attack roll as long as the creature's size is smaller than your mount.",
+						"You have advantage on attacks rolls against any unmounted creature smaller than your mount within your firearm's normal range."
+					]
+				}
+			]
+		},
+		{
+			"name": "Pistol Whipper ",
+			"source": "ArcaneArtillery",
+			"page": 10,
+			"entries": [
+				"You are skilled in using guns as melee weapons when and if they run out of bullets. You increase your Strength or Dexterity ability score by 1, to a maximum of 20, and are now considered proficient with firearms you use as melee weapons.",
+				"The damage die for these firearms is as follows: sidearms are {@dice 1d6}, and they are considered finesse weapons, longarms are {@dice 1d8}, and heavy longarms are {@dice d10}. The damage type for these attacks is bludgeoning."
+			],
+			"ability": [
+				{
+					"choose": {
+						"from": ["str", "dex"],
+						"amount": 1
+					}
+				}
+			],
+			"increase": ["strength", "dexterity"]
+		},
+
+		{
+			"name": "Rifle Master",
+			"source": "ArcaneArtillery",
+			"page": 10,
+			"entries": [
+				"Rifles are complex weapons, but you know just how to make every shot count. You gain the following benefits when wielding a rifle, carbine, or a musket and wheel lock gun with the rifling property:",
+				{
+					"type": "list",
+					"items": [
+						"You gain a +1 bonus to damage rolls with these weapons.",
+						"You can reroll 1s and 2s to damage with these weapons.",
+						"If you roll a critical hit or deal a killing blow with these weapons, you can use your reaction to take an additional shot at a creature within 10 feet of the creature hit.",
+						"The normal range of these weapons increases by 10, and the long range increases by 30."
+					]
+				}
+			]
+		},
+		{
+			"name": "Scattershot Master",
+			"source": "ArcaneArtillery",
+			"page": 10,
+			"entries": [
+				"You have mastered getting the most effect out of firearms with the scatter property. You get the following benefits:",
+				{
+					"type": "list",
+					"items": [
+						"You gain a +1 to attack rolls with these weapons.",
+						"Your scattershot damage can target any creature of your choosing within the scatter range of your target.",
+						"You can reroll 1s and 2s to your scatter damage.",
+						"You can load all of the ammo for shell loading firearms with the scatter property using a bonus action."
+					]
+				}
+			]
+		},
+		{
+			"name": "Sidearm Master",
+			"source": "ArcaneArtillery",
+			"page": 10,
+			"entries": [
+				"You have mastered the art of wielding a sidearm with delicate precision. You gain the following benefits:",
+				{
+					"type": "list",
+					"items": [
+						"You gain a +1 bonus to attack rolls made with these weapons.",
+						"When you take the attack action with a sidearm can use a bonus action to make an attack roll at a creature within 10 feet of you.",
+						"When you roll initiative and are not surprised, you can use your reaction to draw a sidearm and attack a creature within its normal range."
+					]
+				}
+			]
+		},
+		{
+			"name": "Six-Gun Ace",
+			"source": "ArcaneArtillery",
+			"page": 10,
+			"entries": [
+				"You have perfected the art of shooting with your revolver or hand cannon. You gain the following benefits:",
+				{
+					"type": "list",
+					"items": [
+						"You gain a +1 bonus to attack rolls with these weapons.",
+						"You cannot be disarmed while wielding a revolver or hand cannon in one hand and your other hand is free.",
+						"When you make an attack with your revolver or hand cannon and are not holding anything in your other hand, you can use your bonus action to make two additional attacks against creatures within its normal range. You do not add your ability score modifier to the damage of these attacks, unless that modifier is negative."
+					]
+				}
+			]
+		},
+		{
+			"name": "Superior Marksman",
+			"source": "ArcaneArtillery",
+			"page": 11,
+			"entries": [
+				"You have perfected the art of the slow, steady kill. You gain the following benefits",
+				{
+					"type": "list",
+					"items": [
+						"You gain a +1 to attack rolls with these weapons.",
+						"You can use a bonus action to steady your aim. You can then make an attack roll that can neither have advantage or disadvantage. On a hit, deal double the weapon’s damage die.",
+						"If you make a ranged attack roll with advantage, you can reroll one of the attack rolls once."
+					]
+				}
+			]
+		},
+		{
+			"name": "Suppressive Fire",
+			"source": "ArcaneArtillery",
+			"page": 11,
+			"entries": [
+				"When you have a firearm with the automatic or burst fire property drawn, you can use an action to suppress a field of fire within a 10 foot radius at any point within your weapon's normal range. This ability expends a number of bullets equal to half your firearm's total reload count when used. You cannot take bonus actions if you take this action. You must have at least half your gun's reload count loaded into your weapon to use this ability. When you use this ability, you gain the following benefits until the beginning of your next turn.",
+				{
+					"type": "list",
+					"items": [
+						"Creatures within the area have disadvantage on attack rolls and Dexterity Saving Throws.",
+						"Creatures within the area can only move at half speed and cannot Dash.",
+						"If any creatures move or take an action within the area or moves into its area for the first time, you can make an attack against them. You can make this attack for a number of times equal to half your proficiency bonus. You cannot make this attack at the same creature more than once. This attack does not expend ammunition."
+					]
+				}
+			]
+		},
+		{
+			"name": "Tricky",
+			"source": "ArcaneArtillery",
+			"page": 11,
+			"entries": [
+				"You have trained in a performance art with firearms that allows you to use special tricks during combat. You gain the following benefits:",
+				{
+					"type": "list",
+					"items": [
+						"You learn two tricks of your choice from among those available to the {@class Gunslinger|ArcaneArtillery|Gunslinger with the Virtuoso Archetype|Virtuoso} class. If a trick requires your target to make a saving throw to resist the trick's effects, the saving throw DC equals 8 + your proficiency modifier + your Dexterity modifier.",
+						"If you already have superiority dice, you gain two more, otherwise, you have two superiority dice. These are used to fuel your tricks. A superiority die is expended when you use it. You regain your expended superiority dice when you finish a short or long rest.",
+						"If a trick's effect includes a modifier that equals your Gunslinger level, you instead treat that modifier as equal to your highest class level instead."
+					]
+				}
+			]
+		}
+	]
+}
