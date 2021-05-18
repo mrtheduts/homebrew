@@ -15,7 +15,8 @@
 		"optionalFeatureTypes": {
 			"FS:GS": "Fighting Style, Gunslinger",
 			"LI:BF": "Lucky Item, Benefit",
-			"LI:QR": "Lucky Item, Quirk"
+			"LI:QR": "Lucky Item, Quirk",
+			"TRKS": "Tricks"
 		},
 		"dateAdded": 0,
 		"dateLastModified": 0
@@ -211,7 +212,7 @@
 			"page": 10,
 			"entries": [
 				"You are skilled in using guns as melee weapons when and if they run out of bullets. You increase your Strength or Dexterity ability score by 1, to a maximum of 20, and are now considered proficient with firearms you use as melee weapons.",
-				"The damage die for these firearms is as follows: sidearms are {@dice 1d6}, and they are considered finesse weapons, longarms are {@dice 1d8}, and heavy longarms are {@dice d10}. The damage type for these attacks is bludgeoning."
+				"The damage die for these firearms is as follows: sidearms are {@dice 1d6}, and they are considered finesse weapons, longarms are {@dice 1d8}, and heavy longarms are {@dice 1d10}. The damage type for these attacks is bludgeoning."
 			],
 			"ability": [
 				{
@@ -467,6 +468,21 @@
 			]
 		}
 	],
+	"subclass": [
+		{
+			"name": "Virtuoso",
+			"source": "ArcaneArtillery",
+			"className": "Gunslinger",
+			"classSource": "ArcaneArtillery",
+			"shortName": "Virtuoso",
+			"subclassFeatures": [
+				"The Art of Lead|Gunslinger|ArcaneArtillery|Virtuoso|ArcaneArtillery|3",
+				"Head In The Game|Gunslinger|ArcaneArtillery|Virtuoso|ArcaneArtillery|9",
+				"Skilled & Witty|Gunslinger|ArcaneArtillery|Virtuoso|ArcaneArtillery|13",
+				"Trick Prodigy|Gunslinger|ArcaneArtillery|Virtuoso|ArcaneArtillery|17"
+			]
+		}
+	],
 	"classFeature": [
 		{
 			"name": "The Tongue",
@@ -503,9 +519,25 @@
 				{
 					"type": "list",
 					"items": [
-						"{@b Run ‘N Gun.} You can use Dash as a bonus action.",
-						"{@b Slinger’s Senses.} You can make a Wisdom(Perception) check as a bonus action if you have a weapon drawn.",
-						"{@b Stock Strike.} When you make a melee weapon attack using a firearm on your turn, you use your choice of your Strength or Dexterity modifier for the attack and damage rolls.  Additionally, if the attack hits, you can use your bonus action to not provoke opportunity attacks from the target of the attack until the end of your turn."
+						{
+							"name": "Run ‘N Gun",
+							"type": "entry",
+							"entries": ["You can use Dash as a bonus action."]
+						},
+						{
+							"name": "Slinger’s Senses",
+							"type": "entry",
+							"entries": [
+								"You can make a Wisdom(Perception) check as a bonus action if you have a weapon drawn."
+							]
+						},
+						{
+							"name": "Stock Strike",
+							"type": "entry",
+							"entries": [
+								"When you make a melee weapon attack using a firearm on your turn, you use your choice of your Strength or Dexterity modifier for the attack and damage rolls.  Additionally, if the attack hits, you can use your bonus action to not provoke opportunity attacks from the target of the attack until the end of your turn."
+							]
+						}
 					]
 				}
 			]
@@ -727,6 +759,13 @@
 			"entries": [
 				"At 14th level, you can use an action to lie in wait to take an action against any enemy that reveals itself. If a creature moves, makes a weapon attack, or casts a spell while within your firearm's range, you can use your reaction to make an attack against them.",
 				{
+					"name": "Saving Throws",
+					"type": "entries",
+					"entries": [
+						"Overwatch requires targets to make a saving throw to resist the penalites imposed on them. The Saving throw DC is as follows:"
+					]
+				},
+				{
 					"type": "abilityDc",
 					"name": "Overwatch",
 					"attributes": ["dex"]
@@ -737,7 +776,7 @@
 					"iitems": [
 						"If the attack was triggered by the target's movement, it must make a Dexterity saving throw. On a failed save, its movement speed is reduced by half until the end of your next turn. On a successful save, their speed is only reduced by 10 until the end of your next turn.",
 						"If the attack was triggered by the creature making a weapon attack, it must make a Constitution saving throw.  On a failed save, it has disadvantage on attack rolls until the start of your next turn. On a successful save, it only has disadvantage on the triggering attack.",
-						"If the attack was triggered by the creature casting a spell, it must make a Cosntitution save. On a failed save, the target(s) of the spell have advantage on the saving throw to resist the effects of the spell, in addition all targeted creatures gain resistence to the spells damage. If the spell requires a spell attack roll it would be made with disadvantage."
+						"If the attack was triggered by the creature casting a spell, it must make a Constitution save. On a failed save, the target(s) of the spell have advantage on the saving throw to resist the effects of the spell, in addition all targeted creatures gain resistance to the spells damage. If the spell requires a spell attack roll it would be made with disadvantage."
 					]
 				}
 			]
@@ -950,6 +989,267 @@
 				"You gain proficiency in one skill or tool of your choice."
 			],
 			"featureType": ["LI:QR"]
+		},
+		{
+			"name": "Break Cover",
+			"source": "ArcaneArtillery",
+			"page": 17,
+			"entries": [
+				"Spend a superiority die to attack a creature in cover with an attack roll. Add the number rolled to the attack's damage. This attack ignores any cover bonuses the target is benefiting from."
+			],
+			"featureType": ["TRKS"]
+		},
+		{
+			"name": "Commander's Strike",
+			"source": "ArcaneArtillery",
+			"page": 17,
+			"entries": [
+				"When you take the Attack action on your turn, you can forgo one of your attacks and use a bonus action to direct one of your companions to strike. When you do so, choose a friendly creature who can see or hear you and expend one superiority die. That creature can immediately use its reaction to make one weapon attack, adding the superiority die to the attack's damage roll."
+			],
+			"featureType": ["TRKS"]
+		},
+		{
+			"name": "Concussive Attack",
+			"source": "ArcaneArtillery",
+			"page": 17,
+			"entries": [
+				"When you make a successful weapon attack, you can spend a superiority die and add the number rolled to the attack's damage. You cause your target to be discombobulated, imposing disadvantage on the next attack they make."
+			],
+			"featureType": ["TRKS"]
+		},
+		{
+			"name": "Disarming Attack",
+			"source": "ArcaneArtillery",
+			"page": 17,
+			"entries": [
+				"Make an attack roll and expend a superiority die and add the number rolled to the attack's damage. If it succeeds, you force the creature hit to drop one of its held items. The creature must make a Strength saving throw. If they fail, they drop the held item down to their feet."
+			],
+			"featureType": ["TRKS"]
+		},
+		{
+			"name": "Disorienting Attack",
+			"source": "ArcaneArtillery",
+			"page": 17,
+			"entries": [
+				" When you make a successful weapon attack, you can spend a superiority die to disorient them, giving allies an opening. The next attack roll that's made against the target has advantage if the attack is made before the start of your next turn. Add the result of your superiority die to the ally's attack roll."
+			],
+			"featureType": ["TRKS"]
+		},
+		{
+			"name": "Evasive Footwork",
+			"source": "ArcaneArtillery",
+			"page": 17,
+			"entries": [
+				"When you move, you can expend one superiority die, rolling the die and adding the number rolled to your AC until you stop moving."
+			],
+			"featureType": ["TRKS"]
+		},
+		{
+			"name": "Intercept",
+			"source": "ArcaneArtillery",
+			"page": 17,
+			"entries": [
+				" When an enemy that you can see makes a ranged spell attack or a ranged attack within your firearm's range, you can expend a superiority die in order to use a reaction to attempt to shoot it out of the air. Make a ranged weapon attack against the missile or spell. Add the number rolled on your superiority die to the attack roll. These missiles and ranged spells have an AC equal to the attack roll of the creature that shot or cast them. If you succeed, the attack automatically fails as you strike it and either interrupts its effects or knocks it off course. You can use this trick before or after the attack roll is made, but before it's revealed to be a hit or a miss."
+			],
+			"featureType": ["TRKS"]
+		},
+		{
+			"name": "Piercing Attack",
+			"source": "ArcaneArtillery",
+			"page": 17,
+			"entries": [
+				"When you hit with a ranged weapon attack, you can expend a superiority die to have the shot continue on through the target after hitting it in order to attempt to damage an additional creature. If the creature within range of your shot and in the same line as your shot would have been hit by your attack roll, they take damage equal to the number rolled on your superiority die + your Dexterity or Charisma modifier. The damage is the same as the type dealt by the original attack."
+			],
+			"featureType": ["TRKS"]
+		},
+		{
+			"name": "Precision Attack",
+			"source": "ArcaneArtillery",
+			"page": 17,
+			"entries": [
+				"When you make a weapon attack roll against a creature, you can expend one superiority die and add the number rolled to the roll. You can use this trick before or after making the attack roll, but before any effects of the attack are applied."
+			],
+			"featureType": ["TRKS"]
+		},
+		{
+			"name": "Rocket Jump",
+			"source": "ArcaneArtillery",
+			"page": 17,
+			"entries": [
+				"If you make a jump, you can spend a superiority die to make the jump with vim and vigor, adding the number rolled + your Dexterity modifier to that jump's distance."
+			],
+			"featureType": ["TRKS"]
+		},
+		{
+			"name": "Slinger's Luck",
+			"source": "ArcaneArtillery",
+			"page": 17,
+			"entries": [
+				" If your weapon would misfire, you can expend a superiority die in order to channel the inherent luck of your craft to avoid the misfire entirely. Add the number rolled on your superiority die to your next attack roll."
+			],
+			"featureType": ["TRKS"]
+		},
+		{
+			"name": "Trip Attack",
+			"source": "ArcaneArtillery",
+			"page": 17,
+			"entries": [
+				"When you hit a creature with a weapon attack, you can expend one superiority die to attempt to knock the target down. You add a superiority die to the attack’s damage roll, and if the target is Large or smaller, it must make a Strength saving throw. On a failed save, you knock the target prone."
+			],
+			"featureType": ["TRKS"]
+		},
+		{
+			"name": "Warning Attack",
+			"source": "ArcaneArtillery",
+			"page": 17,
+			"entries": [
+				"When you miss a creature with a weapon attack, you can expend a superiority die to attempt to frighten the target as the shot whizzes past them. The target must make a Wisdom saving throw. Subtract the result of your superiority die from their roll. On a failed save, it is frightened of you until the end of your next turn."
+			],
+			"featureType": ["TRKS"]
+		}
+	],
+	"subclassFeature": [
+		{
+			"name": "The Art of Lead",
+			"source": "ArcaneArtillery",
+			"className": "Gunslinger",
+			"classSource": "ArcaneArtillery",
+			"subclassShortName": "Virtuoso",
+			"subclassSource": "ArcaneArtillery",
+			"level": 3,
+			"entries": [
+				"Starting when you choose this trail at level 3, Virtuosos get a bevy of special skills enhanced by special dice called superiority dice.",
+				{
+					"name": "Tricks",
+					"type": "entries",
+					"entries": [
+						"You learn three tricks of your choice, which are detailed under \"tricks\" below. Many tricks enhance an attack or assist allies/debilitate enemies in some way, shape or form.  You can only use one trick per attack.",
+						"You learn two additional tricks at 9th level, 13th level, and 17th level. Each time you learn a new trick, you can also replace one Trick you know with a different one.",
+						{
+							"type": "options",
+							"count": 3,
+							"entries": [
+								{
+									"type": "refOptionalfeature",
+									"optionalfeature": "Break Cover|ArcaneArtillery"
+								},
+								{
+									"type": "refOptionalfeature",
+									"optionalfeature": "Commander's Strike|ArcaneArtillery"
+								},
+								{
+									"type": "refOptionalfeature",
+									"optionalfeature": "Concussive Attack|ArcaneArtillery"
+								},
+								{
+									"type": "refOptionalfeature",
+									"optionalfeature": "Disarming Attack|ArcaneArtillery"
+								},
+								{
+									"type": "refOptionalfeature",
+									"optionalfeature": "Disorienting Attack|ArcaneArtillery"
+								},
+								{
+									"type": "refOptionalfeature",
+									"optionalfeature": "Evasive Footwork|ArcaneArtillery"
+								},
+								{
+									"type": "refOptionalfeature",
+									"optionalfeature": "Intercept|ArcaneArtillery"
+								},
+								{
+									"type": "refOptionalfeature",
+									"optionalfeature": "Piercing Attack|ArcaneArtillery"
+								},
+								{
+									"type": "refOptionalfeature",
+									"optionalfeature": "Precision Attack|ArcaneArtillery"
+								},
+								{
+									"type": "refOptionalfeature",
+									"optionalfeature": "Rocket Jump|ArcaneArtillery"
+								},
+								{
+									"type": "refOptionalfeature",
+									"optionalfeature": "Slinger's Luck|ArcaneArtillery"
+								},
+								{
+									"type": "refOptionalfeature",
+									"optionalfeature": "Trip Attack|ArcaneArtillery"
+								},
+								{
+									"type": "refOptionalfeature",
+									"optionalfeature": "Warning Attack|ArcaneArtillery"
+								}
+							]
+						}
+					]
+				},
+				{
+					"name": "Superiority Dice",
+					"type": "entries",
+					"entries": [
+						"You have four superiority dice, which are {@dice 1d8}s, to spend on Tricks. When you use a superiority die, it's expended. You regain all your superiority dice when you finish a short or long rest. You get an additional superiority die at 9th level, and one more at 17th level."
+					]
+				},
+				{
+					"name": "Superiority Dice Improvements",
+					"type": "entries",
+					"entries": [
+						" Superiority dice turn into {@dice 1d10}s at 9th level and {@dice 1d12}s at 17th level."
+					]
+				},
+				{
+					"name": "Saving Throws",
+					"type": "entries",
+					"entries": [
+						"Some of your Tricks require your target to make a saving throw to resist the trick's effects. The save DC is calculated as follows:"
+					]
+				},
+				{
+					"type": "abilityDc",
+					"name": "Trick",
+					"attributes": ["dex", "cha"]
+				}
+			]
+		},
+		{
+			"name": "Head In The Game",
+			"source": "ArcaneArtillery",
+			"className": "Gunslinger",
+			"classSource": "ArcaneArtillery",
+			"subclassShortName": "Virtuoso",
+			"subclassSource": "ArcaneArtillery",
+			"level": 9,
+			"entries": [
+				"At 9th level, you are constantly on top of your game, and are always ready for action. You add your Charisma modifier to your initiative rolls.",
+				"Additionally, you gain proficiency in Wisdom saving throws."
+			]
+		},
+		{
+			"name": "Skilled & Witty",
+			"source": "ArcaneArtillery",
+			"className": "Gunslinger",
+			"classSource": "ArcaneArtillery",
+			"subclassShortName": "Virtuoso",
+			"subclassSource": "ArcaneArtillery",
+			"level": 13,
+			"entries": [
+				"Starting at 13th level, you have become an epitome of expertise and sheer skill, both on and off the battlefield. You learn an additional skill, tool, or language of your choice.  Alternatively, you can choose a skill or tool you are proficient in. Double your proficiency bonus for checks made using that skill or tool.",
+				"Additionally, you get advantage on Persuasion and Intimidation checks when trying to defuse a fight."
+			]
+		},
+		{
+			"name": "Trick Prodigy",
+			"source": "ArcaneArtillery",
+			"className": "Gunslinger",
+			"classSource": "ArcaneArtillery",
+			"subclassShortName": "Virtuoso",
+			"subclassSource": "ArcaneArtillery",
+			"level": 17,
+			"entries": [
+				"Once you reach 17th level, you regain 1 superiority die if you roll initiative and have no superiority dice remaining."
+			]
 		}
 	]
 }
